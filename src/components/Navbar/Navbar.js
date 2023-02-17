@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  
   return (
     <div className="static">
       <div className="h-20 lg:flex hidden items-center shadow-lg px-20 justify-between">
@@ -13,19 +13,19 @@ const Navbar = () => {
           <h1 className="text-3xl font-semibold text-green-600">JOB PORTAL</h1>
         </div>
         <ul className="flex space-x-8 text-lg">
-          <li>
+          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Home</Link>
           </li>
-          <li>
+          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>About</Link>
           </li>
-          <li>
+          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Contact US</Link>
           </li>
-          <li>
+          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Sign in</Link>
           </li>
-          <li>
+          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Sign out</Link>
           </li>
         </ul>
