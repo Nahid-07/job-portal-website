@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="static">
+    <div>
       <div className="h-20 lg:flex hidden items-center shadow-lg px-20 justify-between">
         <div>
           <h1 className="text-3xl font-semibold text-green-600">JOB PORTAL</h1>
