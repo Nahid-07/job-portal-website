@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Job from "./Job";
+import React, { useEffect, useState } from 'react';
+import Job from './Job';
 
-const FresherJob = () => {
-  const [suggestions, setSuggestions] = useState([]);
+const ExperiencedJob = () => {
+    const [suggestions, setSuggestions] = useState([]);
   useEffect(() => {
     fetch("fresherJob.json")
       .then((res) => res.json())
       .then((data) => setSuggestions(data));
   }, []);
-  return (
-    <div className="bg-slate-200 py-20">
+    return (
+        <div className="bg-slate-300 py-20">
       <div className="max-w-7xl mx-auto  ">
         <div>
-            <h1 className="text-5xl text-center mb-20 font-bold text-[#00044A]">Browse our fresher job circular</h1>
+            <h1 className="text-5xl text-center mb-20 font-bold text-[#00044A]">Browse our Experienced job circular</h1>
         </div>
         <div className="grid md:grid-cols-3 gap-5 px-2">
           {suggestions.map((suggestion, i) => (
@@ -26,7 +26,7 @@ const FresherJob = () => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default FresherJob;
+export default ExperiencedJob;
