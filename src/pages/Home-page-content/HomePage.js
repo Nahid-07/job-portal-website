@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './banner/Banner';
 import ExperiencedJob from './experiencedJob/ExperiencedJob';
 import FresherJob from './fresherJobContent/FresherJob';
+import BdCompany from './top_3_it_company_BD/BdCompany';
 
 const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             <Banner></Banner>
             <FresherJob></FresherJob>
             <ExperiencedJob></ExperiencedJob>
+            <BdCompany></BdCompany>
         </>
     );
 };
