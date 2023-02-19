@@ -3,7 +3,7 @@ import React from "react";
 const Company = ({ company }) => {
   console.log(company);
   return (
-    <div className="border-2 p-3">
+    <div className="border-2 p-3 flex flex-col justify-between">
       <div>
         <img src={company.logo} alt="" className="w-96 h-32" />
       </div>
