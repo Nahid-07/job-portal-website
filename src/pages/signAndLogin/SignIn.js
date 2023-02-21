@@ -24,7 +24,7 @@ const SignIn = () => {
             </button>
           </div>
           <div className="mt-3 text-lg">
-          New at Job portal? <Link className="text-orange-500">Create an account</Link>
+          New at Job portal? <Link to='/signup' className="text-orange-500">Create an account</Link>
           </div>
         </div>
       </div>
