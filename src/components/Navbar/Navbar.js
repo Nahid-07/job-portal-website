@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link>Contact US</Link>
           </li>
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link>Sign in</Link>
+            <Link to='/signin'>Sign in</Link>
           </li>
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Sign out</Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
               <Link>Contact US</Link>
             </li>
             <li>
-              <Link>Sign in</Link>
+              <Link to='/signin'>Sign in</Link>
             </li>
             <li>
               <Link>Sign out</Link>
