@@ -8,18 +8,18 @@ const SignIn = () => {
         <div>
             <h1 className="text-3xl mb-8 font-semibold">Signin to your account</h1>
           <input
-            className="border-2 border-[#000DFF] w-[500px] p-3"
+            className="border-2 border-[#000DFF] w-full md:w-[500px] p-3"
             type="email"
             placeholder="Enter Your Email"
           />{" "}
           <br />
           <input
-            className="border-2 w-[500px] border-[#000DFF] p-3 my-10"
+            className="border-2 w-full md:w-[500px] border-[#000DFF] p-3 my-10"
             type="password"
             placeholder="Enter Your Password"
           />
           <div>
-            <button className="bg-[#000DFF] w-[500px] py-3 text-white text-lg font-semibold">
+            <button className="bg-[#000DFF] w-full md:w-[500px] py-3 text-white text-lg font-semibold">
               Signin
             </button>
           </div>
