@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <ul className="flex space-x-8 text-lg">
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>About</Link>
