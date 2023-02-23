@@ -1,0 +1,11 @@
+.bg-contact{
+    background-image: url('../../images/bg_1.jpg.webp');
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+.bg-color{
+    background-color: blueviolet;
+    height: 70vh;
+    opacity: .7;
+}

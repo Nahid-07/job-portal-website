@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Apply from "../pages/apply/Apply";
+import ContactUs from "../pages/contact/ContactUs";
 import HomePage from "../pages/Home-page-content/HomePage";
 import SignIn from "../pages/signAndLogin/SignIn";
 import SignUp from "../pages/signAndLogin/SignUp";
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
             {
                 path : '/apply',
                 element: <PrivetRoute><Apply></Apply></PrivetRoute>
+            },
+            {
+                path : '/contact-us',
+                element: <ContactUs></ContactUs>
             },
         ]
     }

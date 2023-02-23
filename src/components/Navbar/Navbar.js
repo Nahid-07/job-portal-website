@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link>About</Link>
           </li>
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link>Contact US</Link>
+            <Link to='/contact-us'>Contact US</Link>
           </li>
           {user ? (
             <li
