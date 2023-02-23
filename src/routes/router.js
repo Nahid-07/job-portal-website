@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import Apply from "../pages/apply/Apply";
 import HomePage from "../pages/Home-page-content/HomePage";
 import SignIn from "../pages/signAndLogin/SignIn";
 import SignUp from "../pages/signAndLogin/SignUp";
+import PrivetRoute from "./privetRoute/PrivetRoute";
 
 export const router = createBrowserRouter([
     {
@@ -20,7 +22,11 @@ export const router = createBrowserRouter([
             {
                 path : '/signup',
                 element: <SignUp></SignUp>
-            }
+            },
+            {
+                path : '/apply',
+                element: <PrivetRoute><Apply></Apply></PrivetRoute>
+            },
         ]
     }
 ])

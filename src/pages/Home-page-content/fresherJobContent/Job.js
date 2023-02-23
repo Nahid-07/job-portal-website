@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Job = ({job}) => {
     console.log(job);
@@ -13,9 +14,9 @@ const Job = ({job}) => {
                 <p className='text-lg font-semibold'>Location: {job.location}</p>
 
             </div>
-            <button className='bg-[#000DFF] hover:bg-green-600 duration-300 ease-in w-full py-2 rounded text-white mt-5'>
+            <Link to='/apply'><button className='bg-[#000DFF] hover:bg-green-600 duration-300 ease-in w-full py-2 rounded text-white mt-5'>
                 APPLY NOW
-            </button>
+            </button></Link>
         </div>
     );
 };
