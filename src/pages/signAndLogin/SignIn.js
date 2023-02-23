@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 const SignIn = () => {
+
+  const {signin} = useContext(AuthContext);
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    const email = e.target.email.value
+    const password = e.target.password.value
+
+    signin(email,password).then(result => {
+      const user = result.user;
+      console.log(user);
+    })
+
+  }
   return (
     <div>
       <div className="max-w-7xl mx-auto flex justify-center h-[430px] items-center">
-        <div>
+      <form onSubmit={handleLogin}>
             <h1 className="text-3xl mb-8 font-semibold">Signin to your account</h1>
           <input
             className="border-2 border-[#000DFF] w-full md:w-[500px] p-3"
             type="email"
             placeholder="Enter Your Email"
+            name="email"
           />{" "}
           <br />
           <input
             className="border-2 w-full md:w-[500px] border-[#000DFF] p-3 my-10"
             type="password"
             placeholder="Enter Your Password"
+            name="password"
           />
           <div>
             <button className="bg-[#000DFF] w-full md:w-[500px] py-3 text-white text-lg font-semibold">
@@ -26,7 +42,7 @@ const SignIn = () => {
           <div className="mt-3 text-lg">
           New at Job portal? <Link to='/signup' className="text-orange-500">Create an account</Link>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
