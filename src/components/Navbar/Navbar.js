@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const {user,handleLogout} = useContext(AuthContext)
+
   
   return (
     <div>
@@ -22,12 +26,15 @@ const Navbar = () => {
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Contact US</Link>
           </li>
-          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
+          {
+            user ? <li onClick={handleLogout} className="hover:text-green-600 hover:border-b-2 border-green-600">
+            <Link>Sign out</Link>
+          </li> : <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link to='/signin'>Sign in</Link>
           </li>
-          <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link>Sign out</Link>
-          </li>
+          }
+          
+          
         </ul>
       </div>
 
