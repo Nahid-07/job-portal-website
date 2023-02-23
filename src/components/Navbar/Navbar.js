@@ -7,9 +7,8 @@ import { AuthContext } from "../../context/AuthProvider";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const {user,handleLogout} = useContext(AuthContext)
+  const { user, handleLogout } = useContext(AuthContext);
 
-  
   return (
     <div>
       <div className="h-20 lg:flex hidden items-center shadow-lg px-20 justify-between">
@@ -18,7 +17,7 @@ const Navbar = () => {
         </div>
         <ul className="flex space-x-8 text-lg">
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>About</Link>
@@ -26,15 +25,18 @@ const Navbar = () => {
           <li className="hover:text-green-600 hover:border-b-2 border-green-600">
             <Link>Contact US</Link>
           </li>
-          {
-            user ? <li onClick={handleLogout} className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link>Sign out</Link>
-          </li> : <li className="hover:text-green-600 hover:border-b-2 border-green-600">
-            <Link to='/signin'>Sign in</Link>
-          </li>
-          }
-          
-          
+          {user ? (
+            <li
+              onClick={handleLogout}
+              className="hover:text-green-600 hover:border-b-2 border-green-600"
+            >
+              <Link>Sign out</Link>
+            </li>
+          ) : (
+            <li className="hover:text-green-600 hover:border-b-2 border-green-600">
+              <Link to="/signin">Sign in</Link>
+            </li>
+          )}
         </ul>
       </div>
 
@@ -73,12 +75,15 @@ const Navbar = () => {
             <li>
               <Link>Contact US</Link>
             </li>
-            <li>
-              <Link to='/signin'>Sign in</Link>
-            </li>
-            <li>
-              <Link>Sign out</Link>
-            </li>
+            {user ? (
+              <li>
+                <Link>Sign out</Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/signin">Sign in</Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
