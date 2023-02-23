@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
@@ -12,9 +13,9 @@ const SignUp = () => {
         const email = e.target.emails.value;
         const gender = e.target.genders.value;
 
-        createUser(email,password).then(result => {
-            const user = result.user;
-            console.log(user);
+        createUser(email,password).then(() => {
+            toast.success("account created")
+            
         }).catch(err => console.log(err.message));
         console.log(fullName,gender);
     }
