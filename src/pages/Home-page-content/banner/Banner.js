@@ -9,9 +9,13 @@ const Banner = () => {
             <div className='lg:w-1/2 text-center' data-aos="fade-right"  data-aos-duration="2000">
                 <p className='text-[#6D6E8D] text-2xl'>Easiest way to find a perfect job</p>
                 <h1 className='text-4xl lg:text-5xl font-bold text-[#00044A] my-10'>Find Your Next Dream Job</h1>
-                <div className='text-white'>
+                <div className='text-white md:flex justify-evenly items-center'>
+                    <div>
                     <button className='bg-[#000DFF] font-semibold px-10 py-4 rounded'>LOOKING FOR A JOB</button>
-                    <button className='bg-green-600 font-semibold px-9 py-4 md:ml-9 mt-8 lg:mt-0 rounded'>Find Talent</button>
+                    </div>
+                    <div>
+                    <button className='bg-green-600 font-semibold px-9 py-4 rounded'>Find Talent</button>
+                    </div>
                 </div>
             </div>
 
