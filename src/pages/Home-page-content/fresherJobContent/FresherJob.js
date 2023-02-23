@@ -14,7 +14,7 @@ const FresherJob = () => {
         <div>
             <h1 className="text-5xl text-center mb-20 font-bold text-[#00044A]">Browse our fresher job circular</h1>
         </div>
-        <div className="grid md:grid-cols-3 gap-5 px-2">
+        <div className="grid md:grid-cols-3 gap-5 px-2"  >
           {suggestions.map((suggestion, i) => (
             <Job key={i} job={suggestion}></Job>
           ))}

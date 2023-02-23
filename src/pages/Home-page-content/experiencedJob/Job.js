@@ -2,7 +2,7 @@ import React from 'react';
 
 const Job = ({job}) => {
     return (
-        <div className='p-4 hover:shadow-2xl duration-300 ease-in'>
+        <div className='p-4 hover:shadow-2xl duration-300 ease-in'  data-aos="flip-left" data-aos-duration="1500">
             <div className='flex justify-center'>
                 <img src={job.logo} alt="" />
             </div>
