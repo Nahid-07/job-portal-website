@@ -5,7 +5,6 @@ import { AuthContext } from '../../context/AuthProvider';
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const fullName = e.target.name.value;
@@ -16,8 +15,7 @@ const SignUp = () => {
         createUser(email,password).then(() => {
             toast.success("account created")
             
-        }).catch(err => console.log(err.message));
-        console.log(fullName,gender);
+        }).catch(err => console.log(err.message)); 
     }
     return (
         <div>
